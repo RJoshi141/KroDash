@@ -3,8 +3,7 @@ const { BlobServiceClient } = require('@azure/storage-blob');
 require('dotenv').config();
 
 // Connection string for your Azure Storage Account (keep this secure!)
-const connectionString = 'DefaultEndpointsProtocol=https;AccountName=retailanalysis;AccountKey=Xl8inUQc3EFfPq7LCWaC4QC2LohWM1fomYcLA8GMYAq+38xyHvc4kaxLeq1w9drohTUltIkTbIDF+AStoQXk/A==;EndpointSuffix=core.windows.net';
-
+const connectionString = AZURE_STORAGE_CONNECTION_STRING
 // Names of the container and CSV files to fetch
 const containerName = 'data';
 const fileNames = ['400_households.csv', '400_products.csv', '400_transactions.csv'];
