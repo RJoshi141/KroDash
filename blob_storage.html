@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-CSV Data Search</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include CSS for styling -->
+  <script src="scripts.js"></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+  <div class="container">
+    <h1>Search and Sort Data from Azure Blob Storage</h1>
+    <input type="text" id="searchInput" placeholder="Enter HSHD_NUM" onkeyup="filterTable()">
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">HSHD_NUM</th>
+          <th onclick="sortTable(1)">BASKET_NUM</th>
+          <th onclick="sortTable(2)">DATE</th>
+          <th onclick="sortTable(3)">PRODUCT_NUM</th>
+          <th onclick="sortTable(4)">DEPARTMENT</th>
+          <th onclick="sortTable(5)">COMMODITY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- This will be populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
