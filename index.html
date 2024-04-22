@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single-Page Application</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include CSS for styling -->
+  <script src="scripts.js"></script> <!-- JavaScript to fetch data from Azure Blob Storage -->
 </head>
 <body>
-    <a href="blob_storage.html">Go to Fetch Data Page</a>
-    <h2>User Registration :</h2>
+  <!-- User Registration Section -->
+  <div class="registration-container">
+    <h2>User Registration:</h2>
     <form id="registrationForm">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        <button type="submit">Submit</button>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email"><br><br>
+      <button type="submit">Submit</button>
     </form>
-    
+  </div>
 
+  <!-- Data Fetching and Display Section -->
+  <div class="data-container">
+    <h1>Search and Sort Data from Azure Blob Storage</h1>
+    <input type="text" id="searchInput" placeholder="Enter HSHD_NUM" onkeyup="filterTable()">
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">HSHD_NUM</th>
+          <th onclick="sortTable(1)">BASKET_NUM</th>
+          <th onclick="sortTable(2)">DATE</th>
+          <th onclick="sortTable(3)">PRODUCT_NUM</th>
+          <th onclick="sortTable(4)">DEPARTMENT</th>
+          <th onclick="sortTable(5)">COMMODITY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated by JavaScript dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Load and execute the script that fetches data -->
+  <script>
+    document.addEventListener('DOMContentLoaded', fetchAndCombineData);
+  </script>
 </body>
 </html>
