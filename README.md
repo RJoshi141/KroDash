@@ -68,8 +68,4 @@ Got questions, feedback, or just want to chat? Reach out to me:
 - **GitHub**: [RJoshi141](https://github.com/RJoshi141)  
 - **LinkedIn**: [Ritika Joshi](https://www.linkedin.com/in/ritika-joshi-9395591a7/)  
 - **Email**: [ritikajoshi141@gmail.com](mailto:ritikajoshi141@gmail.com)  
-
-## License 📜
-This project is open source under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as you see fit, but please give credit where it's due.
-
 ---
